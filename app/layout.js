@@ -1,5 +1,4 @@
-import localFont from "next/font/local";
-import { Inter, Fraunces } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
