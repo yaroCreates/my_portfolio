@@ -5,6 +5,7 @@
   padding: 100px 40px 50px 40px;
   height: 100%;
   box-sizing: border-box;
+  cursor: pointer;
   .body {
     display: flex;
     gap: 10px;
@@ -17,6 +18,10 @@
       text-decoration: none;
       color: black;
       font-size: 46px;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
   .footer {
@@ -27,7 +32,7 @@
       margin-top: 5px;
     }
   }
-  @media (max-width:500px) {
+  @media (max-width: 500px) {
     align-items: center;
   }
 }

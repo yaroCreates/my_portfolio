@@ -11,7 +11,7 @@ export default function index() {
           const { title, href } = link;
           return (
             <div key={`b_${i}`} className={styles.linkContainer}>
-              <motion.div
+              <motion.a
                 href={href}
                 custom={i}
                 variants={perspective}
@@ -20,7 +20,7 @@ export default function index() {
                 exit="exit"
               >
                 <a>{title}</a>
-              </motion.div>
+              </motion.a>
             </div>
           );
         })}
