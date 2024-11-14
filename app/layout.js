@@ -1,6 +1,7 @@
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,7 +27,7 @@ export default function RootLayout({ children }) {
       className={`${inter.variable} ${fraunces.variable} antialiased`}
     >
       <body>
-      <Navbar />
+        <Header/>
         <div>{children}</div>
       </body>
     </html>
