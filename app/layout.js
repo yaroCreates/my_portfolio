@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${fraunces.variable} antialiased`}
+      className={`${inter.variable} ${fraunces.variable} antialiased bg-black`}
     >
       <body>
         <Header/>

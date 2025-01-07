@@ -1,8 +1,11 @@
 import React from 'react'
+import Projects from '../components/Projects'
 
 const ProjectPage = () => {
   return (
-    <div>page</div>
+    <div className='bg-black'>
+      <Projects/>
+    </div>
   )
 }
 

@@ -38,7 +38,9 @@ const Navbar = () => {
         animate={isActive ? "open" : "closed"}
         initial="closed"
       >
-        <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
+        <AnimatePresence>
+          {isActive && <Nav setIsActive={setIsActive} isActive={isActive} />}
+        </AnimatePresence>
       </motion.div>
       <Button
         isActive={isActive}
