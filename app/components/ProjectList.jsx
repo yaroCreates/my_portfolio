@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import LinkPreview from "./LinkPreview";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProjectList = () => {
   return (
@@ -22,7 +23,7 @@ const Project = () => {
         const { name, description, tools, img, link } = project;
         return (
           <>
-            <div className="flex flex-col md:flex-row gap-4 cursor-pointer hover:bg-white/5 p-5 rounded-md group duration-200 hover:duration-300 ease-in-out">
+            <Link href={link} target="_blank" className="flex flex-col md:flex-row gap-4 cursor-pointer hover:bg-white/5 p-5 rounded-md group duration-200 hover:duration-300 ease-in-out">
               <div className="flex-none h-[150px] w-full sm:w-[320px] bg-white/30 text-white rounded-md group-hover:border">
                   <Image
                     className="rounded-md"
@@ -40,14 +41,7 @@ const Project = () => {
                   </span>
                 </h2>
                 <p className="text-sm">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-                  illo dignissimos, laudantium eligendi tempora repellendus?
-                  Dignissimos animi facere ipsum doloribus aspernatur dolores
-                  quasi voluptatum, dolorem adipisci quidem iusto. Veritatis,
-                  rem. Labore vitae, reiciendis ea culpa sequi repudiandae at
-                  velit rerum, ad dolores deleniti incidunt dolor debitis
-                  voluptatibus omnis a nam? Iure labore saepe totam quos sit ea
-                  animi quaerat atque.
+                  {description}
                 </p>
                 <div className="flex items-center flex-wrap gap-3">
                   {tools.map((item, index) => (
@@ -60,7 +54,7 @@ const Project = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
           </>
         );
       })}
@@ -72,7 +66,7 @@ const projectData = [
   {
     name: "Paycrest",
     link: "https://paycrest.io",
-    description: "",
+    description: "Decentralized Cryto-to-Fiat Payment Protocol.",
     img: "/projects/paycrest.png",
     tools: ["TypeScript", "Remix", "Next", "Tailwind css"],
   },
