@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
+import { GoClock } from "react-icons/go";
 import LinkPreview from "./LinkPreview";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,18 +21,22 @@ const Project = () => {
   return (
     <>
       {projectData.map((project, index) => {
-        const { name, description, tools, img, link } = project;
+        const { name, description, tools, img, link, year } = project;
         return (
           <>
-            <Link href={link} target="_blank" className="flex flex-col md:flex-row gap-4 cursor-pointer hover:bg-white/5 p-5 rounded-md group duration-200 hover:duration-300 ease-in-out">
+            <Link
+              href={link}
+              target="_blank"
+              className="flex flex-col md:flex-row gap-4 cursor-pointer hover:bg-white/5 p-5 rounded-md group duration-200 hover:duration-300 ease-in-out"
+            >
               <div className="flex-none h-[150px] w-full sm:w-[320px] bg-white/30 text-white rounded-md group-hover:border">
-                  <Image
-                    className="rounded-md"
-                    alt={name}
-                    width={500}
-                    height={200}
-                    src={img}
-                  />
+                <Image
+                  className="rounded-md"
+                  alt={name}
+                  width={500}
+                  height={200}
+                  src={img}
+                />
               </div>
               <div className="space-y-4">
                 <h2 className="text-white text-xl flex items-center gap-1 group-hover:text-brand-yellow">
@@ -40,9 +45,11 @@ const Project = () => {
                     <MdArrowOutward />
                   </span>
                 </h2>
-                <p className="text-sm">
-                  {description}
-                </p>
+                <p className="text-sm">{description}</p>
+                <div className="flex items-center gap-2">
+                  <GoClock className="size-5"/>
+                  <p className="text-sm font-medium">{year}</p>
+                </div>
                 <div className="flex items-center flex-wrap gap-3">
                   {tools.map((item, index) => (
                     <span
@@ -68,20 +75,41 @@ const projectData = [
     link: "https://paycrest.io",
     description: "Decentralized Cryto-to-Fiat Payment Protocol.",
     img: "/projects/paycrest.png",
-    tools: ["TypeScript", "Remix", "Next", "Tailwind css"],
+    tools: ["TypeScript", "Remix", "Next", "Tailwind css", "Framer motion"],
+    year: 2024
   },
   {
     name: "Clocker",
     link: "https://dev.clocker.databaord.ai",
-    description: "Product that helps top brands and organizations create the most engaging events",
+    description:
+      "Product that helps top brands and organizations create the most engaging events",
     img: "/projects/clocker.png",
-    tools: ["React","Redux", "Chakra UI", "Tailwind css"],
+    tools: ["React", "Redux", "Chakra UI", "Tailwind css"],
+    year: 2023
   },
   {
-    name: "Paycrest",
-    link: "https://paycrest.io",
-    description: "",
-    img: "/projects/paycrest.png",
-    tools: ["TypeScript", "Remix", "Next", "Tailwind css"],
+    name: "Portfolio",
+    link: "",
+    description:
+      "My personal portfolio! You're already here.",
+    img: "/projects/portfolio.png",
+    tools: ["Next","Tailwind css","Framer motion"],
+    year: 2025
+  },
+  {
+    name: "Movie web app",
+    link: "https://movie-appz.netlify.app",
+    description: "Built a movie app using React and the The Movie Database (TMDB)",
+    img: "/projects/movieapp.png",
+    tools: ["React", "CSS", "HTML", "REST API"],
+    year: 2022
+  },
+  {
+    name: "Jersey store",
+    link: "https://yarocreates.github.io/shopping-cart/",
+    description: "A football jersey site, showcasing the frontend point of an E-commence site. when a product is clicked, it is added to the cart section of the site.",
+    img: "/projects/jerseystore.png",
+    tools: ["React", "CSS", "HTML"],
+    year: 2021
   },
 ];
