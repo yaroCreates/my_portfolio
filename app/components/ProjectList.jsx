@@ -97,6 +97,15 @@ const projectData = [
     year: 2025
   },
   {
+    name: "DSUST School Portal",
+    link: "https://dsustportal.ng/",
+    description:
+      "This is the portal of Delta State University of Science and Technology, Ozoro. It comprises of Student, Applications and Polytechnic modules",
+    img: "/projects/ozoro.png",
+    tools: ["React", "Bootstrap", "CSS", "Tailwind css"],
+    year: 2023
+  },
+  {
     name: "Movie web app",
     link: "https://movie-appz.netlify.app",
     description: "Built a movie app using React and the The Movie Database (TMDB)",
