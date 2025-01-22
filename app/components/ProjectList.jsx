@@ -19,7 +19,7 @@ const Project = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <>
+    <div className="space-y-5">
       {projectData.map((project, index) => {
         const { name, description, tools, img, link, year } = project;
         return (
@@ -29,7 +29,7 @@ const Project = () => {
               target="_blank"
               className="flex flex-col md:flex-row gap-4 cursor-pointer hover:bg-white/5 p-5 rounded-md group duration-200 hover:duration-300 ease-in-out"
             >
-              <div className="flex-none h-[150px] w-full sm:w-[320px] bg-white/30 text-white rounded-md group-hover:border">
+              <div className="flex-none md:h-[150px] w-full sm:w-[320px] bg-white/30 text-white rounded-md group-hover:border">
                 <Image
                   className="rounded-md"
                   alt={name}
@@ -65,7 +65,7 @@ const Project = () => {
           </>
         );
       })}
-    </>
+    </div>
   );
 };
 
