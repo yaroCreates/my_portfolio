@@ -71,11 +71,11 @@ const projectData = [
     tools: ["TypeScript", "Remix", "Next", "Tailwind css"],
   },
   {
-    name: "Paycrest",
-    link: "https://paycrest.io",
-    description: "",
-    img: "/projects/paycrest.png",
-    tools: ["TypeScript", "Remix", "Next", "Tailwind css"],
+    name: "Clocker",
+    link: "https://dev.clocker.databaord.ai",
+    description: "Product that helps top brands and organizations create the most engaging events",
+    img: "/projects/clocker.png",
+    tools: ["React","Redux", "Chakra UI", "Tailwind css"],
   },
   {
     name: "Paycrest",
