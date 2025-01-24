@@ -4,10 +4,20 @@ import { AnimatePresence, motion } from "framer-motion";
 import Button from "./Button";
 import styles from "./style.module.scss";
 import Nav from "./Nav";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import useOutsideClick from "../hooks/useOutsideClick";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+
+  const closeNavbarRef = useRef(null);
+
+  useOutsideClick({
+    ref: closeNavbarRef,
+    handler: () => setIsActive(false),
+  });
+
+
   const menu = {
     open: {
       width: "480px",
@@ -31,7 +41,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className={styles.header}>
+    <div ref={closeNavbarRef} className={styles.header}>
       <motion.div
         className={styles.menu}
         variants={menu}
