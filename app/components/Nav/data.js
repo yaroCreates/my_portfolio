@@ -7,10 +7,10 @@ export const links = [
         title: "Projects",
         href: "projects"
     },
-    {
-        title: "Contact",
-        href: "/"
-    }
+    // {
+    //     title: "Contact",
+    //     href: "/"
+    // }
 ]
 
 export const footerLinks = [
