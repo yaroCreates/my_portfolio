@@ -31,6 +31,8 @@ export default function index({setIsActive, isActive}) {
           return (
             <motion.a
               variants={slideIn}
+              href={href}
+              target="blank"
               custom={i}
               initial="initial"
               animate="enter"
